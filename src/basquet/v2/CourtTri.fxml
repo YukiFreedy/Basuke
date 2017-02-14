@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="basquet.v2.CourtTriController">
+   <children>
+      <ImageView fitHeight="619.0" fitWidth="688.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resources/Untitled.png" />
+         </image>
+      </ImageView>
+      <RadioButton fx:id="n1" layoutX="63.0" layoutY="58.0" mnemonicParsing="false" onAction="#on1">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="91.0" layoutY="224.0" mnemonicParsing="false" onAction="#on2">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="173.0" layoutY="339.0" mnemonicParsing="false" onAction="#on3">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="341.0" layoutY="402.0" mnemonicParsing="false" onAction="#on4">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="517.0" layoutY="339.0" mnemonicParsing="false" onAction="#on5">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="595.0" layoutY="224.0" mnemonicParsing="false" onAction="#on6">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="629.0" layoutY="58.0" mnemonicParsing="false" onAction="#on7">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </RadioButton>
+   </children>
+</AnchorPane>

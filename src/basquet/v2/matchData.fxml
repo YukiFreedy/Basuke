@@ -1,0 +1,1429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="543.0" prefWidth="933.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="basquet.v2.MatchDataController">
+   <children>
+      <Label fx:id="local" layoutX="22.0" layoutY="20.0" prefHeight="43.0" prefWidth="332.0" text="Riba-Roja de Turia">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="371.0" layoutY="23.0" prefHeight="38.0" prefWidth="37.0" text="VS.">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="visitante" layoutX="456.0" layoutY="21.0" prefHeight="38.0" prefWidth="247.0" text="Label">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="13.0" layoutY="79.0" prefHeight="451.0" prefWidth="884.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Datos Generales">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="25.0" layoutY="85.0" prefHeight="43.0" prefWidth="76.0" text="Cuarto 1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dtot" alignment="CENTER_RIGHT" layoutX="29.0" layoutY="20.0" prefHeight="50.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </TextField>
+                        <Text layoutX="96.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="drtot" alignment="CENTER_RIGHT" layoutX="116.0" layoutY="20.0" prefHeight="50.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </TextField>
+                        <Separator layoutX="616.0" layoutY="7.0" orientation="VERTICAL" prefHeight="416.0" prefWidth="13.0" />
+                        <TextField fx:id="dc1" alignment="CENTER_RIGHT" layoutX="125.0" layoutY="83.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="26.0" layoutY="128.0" prefHeight="43.0" prefWidth="76.0" text="Cuarto 2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dc2" alignment="CENTER_RIGHT" layoutX="126.0" layoutY="126.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="26.0" layoutY="169.0" prefHeight="43.0" prefWidth="76.0" text="Cuarto 3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dc3" alignment="CENTER_RIGHT" layoutX="126.0" layoutY="167.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="26.0" layoutY="210.0" prefHeight="43.0" prefWidth="76.0" text="Cuarto 4">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dc4" alignment="CENTER_RIGHT" layoutX="126.0" layoutY="208.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="644.0" layoutY="14.0" prefHeight="43.0" prefWidth="76.0" text="Rival">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="647.0" layoutY="57.0" prefHeight="43.0" prefWidth="76.0" text="Cuarto 1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dc1r" alignment="CENTER_RIGHT" layoutX="735.0" layoutY="59.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="648.0" layoutY="100.0" prefHeight="43.0" prefWidth="76.0" text="Cuarto 2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dc2r" alignment="CENTER_RIGHT" layoutX="736.0" layoutY="102.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="648.0" layoutY="141.0" prefHeight="43.0" prefWidth="76.0" text="Cuarto 3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dc3r" alignment="CENTER_RIGHT" layoutX="736.0" layoutY="143.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="648.0" layoutY="182.0" prefHeight="43.0" prefWidth="76.0" text="Cuarto 4">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dc4r" alignment="CENTER_RIGHT" layoutX="736.0" layoutY="184.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="29.0" layoutY="263.0" prefHeight="43.0" prefWidth="86.0" text="Tir. Campo">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dtc" alignment="CENTER_RIGHT" layoutX="128.0" layoutY="265.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="30.0" layoutY="306.0" prefHeight="43.0" prefWidth="86.0" text="Tir. Libres">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dtl" alignment="CENTER_RIGHT" layoutX="129.0" layoutY="308.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="30.0" layoutY="347.0" prefHeight="43.0" prefWidth="86.0" text="Triples">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dtr" alignment="CENTER_RIGHT" layoutX="129.0" layoutY="349.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="409.0" layoutY="260.0" prefHeight="43.0" prefWidth="94.0" text="Asistencias">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dass" alignment="CENTER_RIGHT" layoutX="508.0" layoutY="262.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="410.0" layoutY="303.0" prefHeight="43.0" prefWidth="86.0" text="Recuper.">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="drec" alignment="CENTER_RIGHT" layoutX="509.0" layoutY="305.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="410.0" layoutY="344.0" prefHeight="43.0" prefWidth="86.0" text="Tapones">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dtap" alignment="CENTER_RIGHT" layoutX="509.0" layoutY="346.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="409.0" layoutY="172.0" prefHeight="43.0" prefWidth="86.0" text="Reb. Def">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="drd" alignment="CENTER_RIGHT" layoutX="508.0" layoutY="174.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="410.0" layoutY="215.0" prefHeight="43.0" prefWidth="86.0" text="Reb. Ofe">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dro" alignment="CENTER_RIGHT" layoutX="509.0" layoutY="217.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="409.0" layoutY="85.0" prefHeight="43.0" prefWidth="94.0" text="Perdidas">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dper" alignment="CENTER_RIGHT" layoutX="508.0" layoutY="87.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="dtcf" alignment="CENTER_RIGHT" layoutX="191.0" layoutY="265.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="dtlf" alignment="CENTER_RIGHT" layoutX="192.0" layoutY="308.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="dtrf" alignment="CENTER_RIGHT" layoutX="191.0" layoutY="349.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="409.0" layoutY="128.0" prefHeight="43.0" prefWidth="86.0" text="Faltas">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dfal" alignment="CENTER_RIGHT" layoutX="508.0" layoutY="130.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="394.0" layoutY="23.0" prefHeight="43.0" prefWidth="118.0" text="Pun. Posibles">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dpp" alignment="CENTER_RIGHT" layoutX="522.0" layoutY="25.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="649.0" layoutY="223.0" prefHeight="43.0" prefWidth="76.0" text="Faltas">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dcfal" alignment="CENTER_RIGHT" layoutX="737.0" layoutY="225.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="641.0" layoutY="277.0" prefHeight="43.0" prefWidth="86.0" text="Tir. Campo">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dtcr" alignment="CENTER_RIGHT" layoutX="740.0" layoutY="279.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="642.0" layoutY="320.0" prefHeight="43.0" prefWidth="86.0" text="Tir. Libres">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dtlr" alignment="CENTER_RIGHT" layoutX="741.0" layoutY="322.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="642.0" layoutY="361.0" prefHeight="43.0" prefWidth="86.0" text="Triples">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dtrr" alignment="CENTER_RIGHT" layoutX="741.0" layoutY="363.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="dtcr1" alignment="CENTER_RIGHT" layoutX="811.0" layoutY="280.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="dtlr1" alignment="CENTER_RIGHT" layoutX="812.0" layoutY="323.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="dtrr1" alignment="CENTER_RIGHT" layoutX="812.0" layoutY="364.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="805.0" layoutY="14.0" prefHeight="43.0" prefWidth="86.0" text="Fallados">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dc1r1" alignment="CENTER_RIGHT" layoutX="811.0" layoutY="61.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="dc2r1" alignment="CENTER_RIGHT" layoutX="812.0" layoutY="104.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="dc3r1" alignment="CENTER_RIGHT" layoutX="812.0" layoutY="145.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="dc4r1" alignment="CENTER_RIGHT" layoutX="812.0" layoutY="186.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="dc11" alignment="CENTER_RIGHT" layoutX="191.0" layoutY="83.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="dc21" alignment="CENTER_RIGHT" layoutX="192.0" layoutY="126.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="dc31" alignment="CENTER_RIGHT" layoutX="192.0" layoutY="167.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="dc41" alignment="CENTER_RIGHT" layoutX="192.0" layoutY="208.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="190.0" layoutY="38.0" prefHeight="43.0" prefWidth="118.0" text="Fallados">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Cuarto 1">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="t1" alignment="CENTER_RIGHT" layoutX="41.0" layoutY="19.0" prefHeight="50.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </TextField>
+                        <Text layoutX="108.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="t1r" alignment="CENTER_RIGHT" layoutX="128.0" layoutY="19.0" prefHeight="50.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </TextField>
+                        <Separator layoutX="616.0" layoutY="7.0" orientation="VERTICAL" prefHeight="416.0" prefWidth="13.0" />
+                        <Label layoutX="644.0" layoutY="14.0" prefHeight="43.0" prefWidth="76.0" text="Rival">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="44.0" layoutY="125.0" prefHeight="43.0" prefWidth="86.0" text="Tir. Campo">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tc1" alignment="CENTER_RIGHT" layoutX="143.0" layoutY="127.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="45.0" layoutY="168.0" prefHeight="43.0" prefWidth="86.0" text="Tir. Libres">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tl1" alignment="CENTER_RIGHT" layoutX="144.0" layoutY="170.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="45.0" layoutY="209.0" prefHeight="43.0" prefWidth="86.0" text="Triples">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tr1" alignment="CENTER_RIGHT" layoutX="144.0" layoutY="211.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="409.0" layoutY="129.0" prefHeight="43.0" prefWidth="94.0" text="Asistencias">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="ass1" alignment="CENTER_RIGHT" layoutX="508.0" layoutY="131.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="410.0" layoutY="172.0" prefHeight="43.0" prefWidth="86.0" text="Recuper.">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="rec1" alignment="CENTER_RIGHT" layoutX="509.0" layoutY="174.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="410.0" layoutY="213.0" prefHeight="43.0" prefWidth="86.0" text="Tapones">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tap1" alignment="CENTER_RIGHT" layoutX="509.0" layoutY="215.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="409.0" layoutY="296.0" prefHeight="43.0" prefWidth="86.0" text="Reb. Def">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="rd1" alignment="CENTER_RIGHT" layoutX="508.0" layoutY="298.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="410.0" layoutY="339.0" prefHeight="43.0" prefWidth="86.0" text="Reb. Ofe">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="ro1" alignment="CENTER_RIGHT" layoutX="509.0" layoutY="341.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="409.0" layoutY="85.0" prefHeight="43.0" prefWidth="94.0" text="Perdidas">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="per1" alignment="CENTER_RIGHT" layoutX="508.0" layoutY="87.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="tcf1" alignment="CENTER_RIGHT" layoutX="213.0" layoutY="128.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="tlf1" alignment="CENTER_RIGHT" layoutX="213.0" layoutY="169.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="trf1" alignment="CENTER_RIGHT" layoutX="212.0" layoutY="212.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="410.0" layoutY="255.0" prefHeight="43.0" prefWidth="86.0" text="Faltas">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="fal1" alignment="CENTER_RIGHT" layoutX="509.0" layoutY="257.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="378.0" layoutY="23.0" prefHeight="43.0" prefWidth="118.0" text="Pun. Posibles">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pp1" alignment="CENTER_RIGHT" layoutX="506.0" layoutY="25.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="649.0" layoutY="223.0" prefHeight="43.0" prefWidth="76.0" text="Faltas">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="fal1r" alignment="CENTER_RIGHT" layoutX="737.0" layoutY="225.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="646.0" layoutY="63.0" prefHeight="43.0" prefWidth="86.0" text="Tir. Campo">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tc1r" alignment="CENTER_RIGHT" layoutX="745.0" layoutY="65.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="647.0" layoutY="106.0" prefHeight="43.0" prefWidth="86.0" text="Tir. Libres">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tl1r" alignment="CENTER_RIGHT" layoutX="746.0" layoutY="108.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="647.0" layoutY="147.0" prefHeight="43.0" prefWidth="86.0" text="Triples">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tr1r" alignment="CENTER_RIGHT" layoutX="746.0" layoutY="149.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="202.0" layoutY="83.0" prefHeight="43.0" prefWidth="118.0" text="Fallidos">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tc1r1" alignment="CENTER_RIGHT" layoutX="811.0" layoutY="66.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="tl1r1" alignment="CENTER_RIGHT" layoutX="812.0" layoutY="109.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="tr1r1" alignment="CENTER_RIGHT" layoutX="812.0" layoutY="150.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="811.0" layoutY="23.0" prefHeight="43.0" prefWidth="118.0" text="Fallidos">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Cuarto 2">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="t2" alignment="CENTER_RIGHT" layoutX="41.0" layoutY="19.0" prefHeight="50.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </TextField>
+                        <Text layoutX="108.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="t2r" alignment="CENTER_RIGHT" layoutX="128.0" layoutY="19.0" prefHeight="50.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </TextField>
+                        <Separator layoutX="616.0" layoutY="7.0" orientation="VERTICAL" prefHeight="416.0" prefWidth="13.0" />
+                        <Label layoutX="644.0" layoutY="14.0" prefHeight="43.0" prefWidth="76.0" text="Rival">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="45.0" layoutY="128.0" prefHeight="43.0" prefWidth="86.0" text="Tir. Campo">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tc2" alignment="CENTER_RIGHT" layoutX="144.0" layoutY="130.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="46.0" layoutY="171.0" prefHeight="43.0" prefWidth="86.0" text="Tir. Libres">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tl2" alignment="CENTER_RIGHT" layoutX="145.0" layoutY="173.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="46.0" layoutY="212.0" prefHeight="43.0" prefWidth="86.0" text="Triples">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tr2" alignment="CENTER_RIGHT" layoutX="145.0" layoutY="214.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="409.0" layoutY="127.0" prefHeight="43.0" prefWidth="94.0" text="Asistencias">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="ass2" alignment="CENTER_RIGHT" layoutX="508.0" layoutY="129.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="410.0" layoutY="170.0" prefHeight="43.0" prefWidth="86.0" text="Recuper.">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="rec2" alignment="CENTER_RIGHT" layoutX="509.0" layoutY="172.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="410.0" layoutY="211.0" prefHeight="43.0" prefWidth="86.0" text="Tapones">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tap2" alignment="CENTER_RIGHT" layoutX="509.0" layoutY="213.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="409.0" layoutY="296.0" prefHeight="43.0" prefWidth="86.0" text="Reb. Def">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="rd2" alignment="CENTER_RIGHT" layoutX="508.0" layoutY="298.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="410.0" layoutY="339.0" prefHeight="43.0" prefWidth="86.0" text="Reb. Ofe">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="ro2" alignment="CENTER_RIGHT" layoutX="509.0" layoutY="341.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="409.0" layoutY="85.0" prefHeight="43.0" prefWidth="94.0" text="Perdidas">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="per2" alignment="CENTER_RIGHT" layoutX="508.0" layoutY="87.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="tcf2" alignment="CENTER_RIGHT" layoutX="211.0" layoutY="131.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="tlf2" alignment="CENTER_RIGHT" layoutX="211.0" layoutY="172.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="trf2" alignment="CENTER_RIGHT" layoutX="210.0" layoutY="215.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="410.0" layoutY="255.0" prefHeight="43.0" prefWidth="86.0" text="Faltas">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="fal2" alignment="CENTER_RIGHT" layoutX="509.0" layoutY="257.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="377.0" layoutY="23.0" prefHeight="43.0" prefWidth="118.0" text="Pun. Posibles">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pp2" alignment="CENTER_RIGHT" layoutX="505.0" layoutY="25.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="649.0" layoutY="223.0" prefHeight="43.0" prefWidth="76.0" text="Faltas">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="fal2r" alignment="CENTER_RIGHT" layoutX="737.0" layoutY="225.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="646.0" layoutY="63.0" prefHeight="43.0" prefWidth="86.0" text="Tir. Campo">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tc2r" alignment="CENTER_RIGHT" layoutX="745.0" layoutY="65.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="647.0" layoutY="106.0" prefHeight="43.0" prefWidth="86.0" text="Tir. Libres">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tl2r" alignment="CENTER_RIGHT" layoutX="746.0" layoutY="108.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="647.0" layoutY="147.0" prefHeight="43.0" prefWidth="86.0" text="Triples">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tr2r" alignment="CENTER_RIGHT" layoutX="746.0" layoutY="149.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="tc2r1" alignment="CENTER_RIGHT" layoutX="811.0" layoutY="65.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="tl2r1" alignment="CENTER_RIGHT" layoutX="812.0" layoutY="108.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="tr2r1" alignment="CENTER_RIGHT" layoutX="812.0" layoutY="149.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="202.0" layoutY="85.0" prefHeight="43.0" prefWidth="118.0" text="Fallidos">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="810.0" layoutY="23.0" prefHeight="43.0" prefWidth="118.0" text="Fallidos">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Cuarto 3">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="t3" alignment="CENTER_RIGHT" layoutX="41.0" layoutY="19.0" prefHeight="50.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </TextField>
+                        <Text layoutX="108.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="t3r" alignment="CENTER_RIGHT" layoutX="128.0" layoutY="19.0" prefHeight="50.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </TextField>
+                        <Separator layoutX="616.0" layoutY="7.0" orientation="VERTICAL" prefHeight="416.0" prefWidth="13.0" />
+                        <Label layoutX="644.0" layoutY="14.0" prefHeight="43.0" prefWidth="76.0" text="Rival">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="44.0" layoutY="128.0" prefHeight="43.0" prefWidth="86.0" text="Tir. Campo">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tc3" alignment="CENTER_RIGHT" layoutX="143.0" layoutY="130.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="45.0" layoutY="171.0" prefHeight="43.0" prefWidth="86.0" text="Tir. Libres">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tl3" alignment="CENTER_RIGHT" layoutX="144.0" layoutY="173.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="45.0" layoutY="212.0" prefHeight="43.0" prefWidth="86.0" text="Triples">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tr3" alignment="CENTER_RIGHT" layoutX="144.0" layoutY="214.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="409.0" layoutY="127.0" prefHeight="43.0" prefWidth="94.0" text="Asistencias">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="ass3" alignment="CENTER_RIGHT" layoutX="508.0" layoutY="129.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="410.0" layoutY="170.0" prefHeight="43.0" prefWidth="86.0" text="Recuper.">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="rec3" alignment="CENTER_RIGHT" layoutX="509.0" layoutY="172.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="410.0" layoutY="211.0" prefHeight="43.0" prefWidth="86.0" text="Tapones">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tap3" alignment="CENTER_RIGHT" layoutX="509.0" layoutY="213.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="409.0" layoutY="296.0" prefHeight="43.0" prefWidth="86.0" text="Reb. Def">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="rd3" alignment="CENTER_RIGHT" layoutX="508.0" layoutY="298.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="410.0" layoutY="339.0" prefHeight="43.0" prefWidth="86.0" text="Reb. Ofe">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="ro3" alignment="CENTER_RIGHT" layoutX="509.0" layoutY="341.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="409.0" layoutY="85.0" prefHeight="43.0" prefWidth="94.0" text="Perdidas">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="per3" alignment="CENTER_RIGHT" layoutX="508.0" layoutY="87.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="tcf3" alignment="CENTER_RIGHT" layoutX="211.0" layoutY="131.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="tlf3" alignment="CENTER_RIGHT" layoutX="211.0" layoutY="172.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="trf3" alignment="CENTER_RIGHT" layoutX="210.0" layoutY="215.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="410.0" layoutY="255.0" prefHeight="43.0" prefWidth="86.0" text="Faltas">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="fal3" alignment="CENTER_RIGHT" layoutX="509.0" layoutY="257.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="378.0" layoutY="23.0" prefHeight="43.0" prefWidth="118.0" text="Pun. Posibles">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pp3" alignment="CENTER_RIGHT" layoutX="506.0" layoutY="25.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="649.0" layoutY="223.0" prefHeight="43.0" prefWidth="76.0" text="Faltas">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="fal3r" alignment="CENTER_RIGHT" layoutX="737.0" layoutY="225.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="646.0" layoutY="63.0" prefHeight="43.0" prefWidth="86.0" text="Tir. Campo">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tc3r" alignment="CENTER_RIGHT" layoutX="745.0" layoutY="65.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="647.0" layoutY="106.0" prefHeight="43.0" prefWidth="86.0" text="Tir. Libres">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tl3r" alignment="CENTER_RIGHT" layoutX="746.0" layoutY="108.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="647.0" layoutY="147.0" prefHeight="43.0" prefWidth="86.0" text="Triples">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tr3r" alignment="CENTER_RIGHT" layoutX="746.0" layoutY="149.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="209.0" layoutY="87.0" prefHeight="43.0" prefWidth="118.0" text="Fallidos">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tc3r1" alignment="CENTER_RIGHT" layoutX="811.0" layoutY="66.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="tl3r1" alignment="CENTER_RIGHT" layoutX="812.0" layoutY="109.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="tr3r1" alignment="CENTER_RIGHT" layoutX="812.0" layoutY="150.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="811.0" layoutY="23.0" prefHeight="43.0" prefWidth="118.0" text="Fallidos">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Cuarto 4">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="t4" alignment="CENTER_RIGHT" layoutX="41.0" layoutY="19.0" prefHeight="50.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </TextField>
+                        <Text layoutX="108.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="t4r" alignment="CENTER_RIGHT" layoutX="128.0" layoutY="19.0" prefHeight="50.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </TextField>
+                        <Separator layoutX="616.0" layoutY="7.0" orientation="VERTICAL" prefHeight="416.0" prefWidth="13.0" />
+                        <Label layoutX="644.0" layoutY="14.0" prefHeight="43.0" prefWidth="76.0" text="Rival">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="45.0" layoutY="128.0" prefHeight="43.0" prefWidth="86.0" text="Tir. Campo">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tc4" alignment="CENTER_RIGHT" layoutX="144.0" layoutY="130.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="46.0" layoutY="171.0" prefHeight="43.0" prefWidth="86.0" text="Tir. Libres">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tl4" alignment="CENTER_RIGHT" layoutX="145.0" layoutY="173.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="46.0" layoutY="212.0" prefHeight="43.0" prefWidth="86.0" text="Triples">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tr4" alignment="CENTER_RIGHT" layoutX="145.0" layoutY="214.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="409.0" layoutY="127.0" prefHeight="43.0" prefWidth="94.0" text="Asistencias">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="ass4" alignment="CENTER_RIGHT" layoutX="508.0" layoutY="129.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="410.0" layoutY="170.0" prefHeight="43.0" prefWidth="86.0" text="Recuper.">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="rec4" alignment="CENTER_RIGHT" layoutX="509.0" layoutY="172.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="410.0" layoutY="211.0" prefHeight="43.0" prefWidth="86.0" text="Tapones">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tap4" alignment="CENTER_RIGHT" layoutX="509.0" layoutY="213.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="409.0" layoutY="296.0" prefHeight="43.0" prefWidth="86.0" text="Reb. Def">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="rd4" alignment="CENTER_RIGHT" layoutX="508.0" layoutY="298.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="410.0" layoutY="339.0" prefHeight="43.0" prefWidth="86.0" text="Reb. Ofe">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="ro4" alignment="CENTER_RIGHT" layoutX="509.0" layoutY="341.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="409.0" layoutY="85.0" prefHeight="43.0" prefWidth="94.0" text="Perdidas">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="per4" alignment="CENTER_RIGHT" layoutX="508.0" layoutY="87.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="tcf4" alignment="CENTER_RIGHT" layoutX="211.0" layoutY="131.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="tlf4" alignment="CENTER_RIGHT" layoutX="211.0" layoutY="172.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="trf4" alignment="CENTER_RIGHT" layoutX="210.0" layoutY="215.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="410.0" layoutY="255.0" prefHeight="43.0" prefWidth="86.0" text="Faltas">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="fal4" alignment="CENTER_RIGHT" layoutX="509.0" layoutY="257.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="380.0" layoutY="23.0" prefHeight="43.0" prefWidth="118.0" text="Pun. Posibles">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pp4" alignment="CENTER_RIGHT" layoutX="508.0" layoutY="25.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="649.0" layoutY="223.0" prefHeight="43.0" prefWidth="76.0" text="Faltas">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="fal4r" alignment="CENTER_RIGHT" layoutX="737.0" layoutY="225.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="646.0" layoutY="63.0" prefHeight="43.0" prefWidth="86.0" text="Tir. Campo">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tc4r" alignment="CENTER_RIGHT" layoutX="745.0" layoutY="65.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="647.0" layoutY="106.0" prefHeight="43.0" prefWidth="86.0" text="Tir. Libres">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tl4r" alignment="CENTER_RIGHT" layoutX="746.0" layoutY="108.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="647.0" layoutY="147.0" prefHeight="43.0" prefWidth="86.0" text="Triples">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tr4r" alignment="CENTER_RIGHT" layoutX="746.0" layoutY="149.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="209.0" layoutY="85.0" prefHeight="43.0" prefWidth="118.0" text="Fallidos">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tc4r1" alignment="CENTER_RIGHT" layoutX="811.0" layoutY="66.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="tl4r1" alignment="CENTER_RIGHT" layoutX="812.0" layoutY="109.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="tr4r1" alignment="CENTER_RIGHT" layoutX="812.0" layoutY="150.0" prefHeight="29.0" prefWidth="58.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="810.0" layoutY="23.0" prefHeight="43.0" prefWidth="118.0" text="Fallidos">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Jugadores +">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableMatch" prefHeight="422.0" prefWidth="884.0">
+                          <columns>
+                            <TableColumn fx:id="name1" prefWidth="110.0" text="Nombre" />
+                            <TableColumn fx:id="tot" minWidth="7.0" prefWidth="53.0" text="Pun. Tot." />
+                              <TableColumn fx:id="tl" minWidth="7.0" prefWidth="89.0" text="Tiros Libres" />
+                              <TableColumn fx:id="tc" minWidth="7.0" prefWidth="89.0" text="Tiros Campo" />
+                              <TableColumn fx:id="tr" minWidth="7.0" prefWidth="89.0" text="Triples" />
+                              <TableColumn fx:id="ass" minWidth="7.0" prefWidth="89.0" text="Asistencias" />
+                              <TableColumn fx:id="rec" minWidth="7.0" prefWidth="100.0" text="Recuper." />
+                              <TableColumn fx:id="tap" minWidth="7.0" prefWidth="100.0" text="Tapones" />
+                              <TableColumn fx:id="rd" minWidth="7.0" prefWidth="100.0" text="Reb. Def" />
+                              <TableColumn fx:id="ro" minWidth="7.0" prefWidth="100.0" text="Reb. Ofe" />
+                              <TableColumn fx:id="val" minWidth="7.0" prefWidth="100.0" text="Valoración" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Jugadores -">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableMatch1" prefHeight="422.0" prefWidth="884.0">
+                           <columns>
+                              <TableColumn fx:id="name2" prefWidth="168.0" text="Nombre" />
+                              <TableColumn fx:id="per" minWidth="7.0" prefWidth="68.0" text="Perdidas" />
+                              <TableColumn fx:id="pf" minWidth="7.0" prefWidth="89.0" text="Puntos Fallados" />
+                              <TableColumn fx:id="tlf" minWidth="7.0" prefWidth="89.0" text="Libres Fallados" />
+                              <TableColumn fx:id="tcf" minWidth="7.0" prefWidth="89.0" text="Tiros 2 Fallados" />
+                              <TableColumn fx:id="trf" minWidth="7.0" prefWidth="100.0" text="Triples Fallados" />
+                              <TableColumn fx:id="fal" minWidth="7.0" prefWidth="100.0" text="Faltas" />
+                              <TableColumn fx:id="tj" minWidth="7.0" prefWidth="100.0" text="Tiempo Jugado" />
+                              <TableColumn fx:id="masmenos" minWidth="7.0" prefWidth="100.0" text="+/-" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Gráficos">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="selectDatos" layoutX="177.0" layoutY="355.0" mnemonicParsing="false" onAction="#onSeeChart" prefHeight="53.0" prefWidth="192.0" text="Mostrar Gráfico">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Text layoutX="387.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nº Partidos" wrappingWidth="109.13671875">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <RadioButton fx:id="fiveMatches" layoutX="512.0" layoutY="371.0" mnemonicParsing="false" text="Últimos 5">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="mediumMatches" layoutX="616.0" layoutY="371.0" mnemonicParsing="false" text="Mitad Partidos">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="fullMatches" layoutX="750.0" layoutY="370.0" mnemonicParsing="false" text="Todos">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </RadioButton>
+                        <HBox fx:id="boxChart" alignment="CENTER" layoutY="13.0" prefHeight="335.0" prefWidth="884.0" spacing="20.0" />
+                        <HBox fx:id="hbox" alignment="CENTER" layoutX="10.0" layoutY="11.0" prefHeight="328.0" prefWidth="853.0">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="328.0" prefWidth="207.0" spacing="10.0">
+                                 <children>
+                                    <RadioButton fx:id="puntosTotales" mnemonicParsing="false" text="Puntos Totales">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="tirosLibres" mnemonicParsing="false" text="Tiros Libres">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="tirosCampo" mnemonicParsing="false" text="Tiros Campo">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="triples" mnemonicParsing="false" text="Triples">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="asistencias" mnemonicParsing="false" text="Asistencias">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="recuperaciones" mnemonicParsing="false" text="Recuperaciones">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="rebotesDefensivos" mnemonicParsing="false" text="Rebotes Defensivos">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="rebotesOfensivos" mnemonicParsing="false" text="Rebotes Ofensivos">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </RadioButton>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="328.0" prefWidth="207.0" spacing="10.0">
+                                 <children>
+                                    <RadioButton fx:id="tapones" mnemonicParsing="false" text="Tapones">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="perdidas" mnemonicParsing="false" text="Perdidas">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="puntosFallados" mnemonicParsing="false" text="Puntos Fallados">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="libresFallados" mnemonicParsing="false" text="Libres Fallados">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="campoFallados" mnemonicParsing="false" text="Campo Fallados">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="triplesFallados" mnemonicParsing="false" text="Triples Fallados">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="faltas" mnemonicParsing="false" text="Faltas">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </RadioButton>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

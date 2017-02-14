@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="558.0" prefWidth="897.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="basquet.v2.SwitchController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="354.0" minWidth="10.0" prefWidth="354.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="276.0" minWidth="10.0" prefWidth="136.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="353.0" minWidth="10.0" prefWidth="353.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TableView fx:id="tableAct" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" GridPane.rowSpan="4">
+        <columns>
+          <TableColumn fx:id="plDorsal1" prefWidth="35.0" text="Nº" />
+            <TableColumn fx:id="name1" prefWidth="87.0" text="Nombre" />
+            <TableColumn fx:id="apellido1" prefWidth="140.0" text="Apellidos" />
+            <TableColumn fx:id="pos1" prefWidth="71.0" text="Posición" />
+        </columns>
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" />
+         </GridPane.margin>
+      </TableView>
+      <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <children>
+            <Button fx:id="left" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onLeft" prefHeight="64.0" prefWidth="190.0" text="&lt;--------" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <Button fx:id="right" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onRight" prefHeight="64.0" prefWidth="190.0" text="--------&gt;" />
+         </children>
+      </VBox>
+      <Button fx:id="accept" mnemonicParsing="false" onAction="#onAccept" prefHeight="55.0" prefWidth="318.0" text="Aceptar Cambios" GridPane.columnIndex="2">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tableCam" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.rowSpan="4">
+         <columns>
+            <TableColumn fx:id="plDorsal2" prefWidth="35.0" text="Nº" />
+            <TableColumn fx:id="name2" prefWidth="87.0" text="Nombre" />
+            <TableColumn fx:id="apellido2" prefWidth="140.0" text="Apellidos" />
+            <TableColumn fx:id="pos2" prefWidth="71.0" text="Posición" />
+         </columns>
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" />
+         </GridPane.margin>
+      </TableView>
+   </children>
+</GridPane>

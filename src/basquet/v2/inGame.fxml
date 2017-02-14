@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="1146.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="basquet.v2.InGameController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="900.0" minWidth="0.0" prefWidth="70.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="900.0" minWidth="0.0" prefWidth="70.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="0.0" prefWidth="26.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="900.0" minWidth="0.0" prefWidth="70.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="900.0" minWidth="10.0" prefWidth="70.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="900.0" minWidth="10.0" prefWidth="70.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="465.0" minWidth="0.0" prefWidth="41.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="853.0" minWidth="10.0" prefWidth="530.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="190.0" minHeight="10.0" prefHeight="190.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="199.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="229.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="205.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="153.0" minHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Separator orientation="VERTICAL" prefHeight="117.0" prefWidth="67.0" GridPane.columnIndex="6" GridPane.rowIndex="1" GridPane.rowSpan="5" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1" GridPane.rowSpan="6">
+         <children>
+            <Label fx:id="namePr" alignment="CENTER" layoutX="5.0" layoutY="14.0" prefHeight="43.0" prefWidth="246.0" text="Riba-Roja de Turia" textAlignment="CENTER">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <TextField fx:id="puntRival" alignment="CENTER_RIGHT" editable="false" layoutX="342.0" layoutY="75.0" prefHeight="45.0" prefWidth="85.0" text="0">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="puntPr" alignment="CENTER_RIGHT" editable="false" layoutX="86.0" layoutY="75.0" prefHeight="45.0" prefWidth="85.0" text="0">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </TextField>
+            <Button fx:id="ac1" layoutX="292.0" layoutY="204.0" mnemonicParsing="false" onAction="#onC1R" prefHeight="57.0" prefWidth="60.0" text="1" />
+            <TextField fx:id="axxx" editable="false" layoutX="62.0" layoutY="349.0" prefHeight="45.0" prefWidth="45.0" text="1" />
+            <TextField editable="false" layoutX="115.0" layoutY="349.0" prefHeight="45.0" prefWidth="45.0" text="0" fx:id="xaxx" />
+            <Label layoutX="165.0" layoutY="353.0" text=":">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <TextField editable="false" layoutX="177.0" layoutY="350.0" prefHeight="45.0" prefWidth="45.0" text="0" fx:id="xxax" />
+            <TextField editable="false" layoutX="230.0" layoutY="350.0" prefHeight="45.0" prefWidth="45.0" text="0" fx:id="xxxa" />
+            <TextField fx:id="cuarto" editable="false" layoutX="179.0" layoutY="430.0" prefHeight="45.0" prefWidth="172.0" text="Primero" />
+            <Label layoutX="12.0" layoutY="440.0" text="Cuarto">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="cuartoNext" layoutX="363.0" layoutY="431.0" mnemonicParsing="false" onAction="#onCuarto" prefHeight="43.0" prefWidth="128.0" text="Siguiente" />
+            <TextField fx:id="faltasPr" alignment="CENTER" editable="false" layoutX="54.0" layoutY="154.0" text="Faltas: 0" />
+            <TextField fx:id="faltasRival" alignment="CENTER" editable="false" layoutX="310.0" layoutY="154.0" text="Faltas: 0" />
+            <Button fx:id="stopTimer" layoutX="306.0" layoutY="350.0" mnemonicParsing="false" onAction="#onStopTimer" prefHeight="45.0" prefWidth="166.0" text="Detener Tiempo">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <Label layoutX="94.0" layoutY="491.0" prefHeight="17.0" prefWidth="149.0" text="Faltas">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="butData" layoutX="310.0" layoutY="523.0" mnemonicParsing="false" onAction="#onMatchData" prefHeight="76.0" prefWidth="134.0" text="Datos De Partido" />
+            <Button fx:id="ac2" layoutX="365.0" layoutY="204.0" mnemonicParsing="false" onAction="#onC2R" prefHeight="57.0" prefWidth="60.0" text="2" />
+            <Button fx:id="ac3" layoutX="437.0" layoutY="204.0" mnemonicParsing="false" onAction="#onC3R" prefHeight="57.0" prefWidth="60.0" text="3" />
+            <CheckBox fx:id="restarRival" layoutX="185.0" layoutY="214.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#onRestarR" prefHeight="38.0" prefWidth="91.0" text="Restar">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </CheckBox>
+            <Label layoutX="217.0" layoutY="277.0" prefHeight="35.0" prefWidth="71.0" text="Fallos">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Button fx:id="fl1" layoutX="293.0" layoutY="268.0" mnemonicParsing="false" onAction="#onFC1R" prefHeight="57.0" prefWidth="60.0" text="1" />
+            <Button fx:id="fl2" layoutX="366.0" layoutY="268.0" mnemonicParsing="false" onAction="#onFC2R" prefHeight="57.0" prefWidth="60.0" text="2" />
+            <Button fx:id="fl3" layoutX="438.0" layoutY="268.0" mnemonicParsing="false" onAction="#onFC3R" prefHeight="57.0" prefWidth="60.0" text="3" />
+            <Separator layoutX="19.0" layoutY="182.0" prefHeight="17.0" prefWidth="482.0" />
+            <Separator layoutX="20.0" layoutY="331.0" prefHeight="17.0" prefWidth="482.0" />
+            <Label layoutX="17.0" layoutY="196.0" prefHeight="17.0" prefWidth="134.0" text="Equipo Rival">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="253.0" text="Pun. Anortados / Pun. Posibles" />
+            <TextField fx:id="anotados" alignment="CENTER_RIGHT" editable="false" layoutX="37.0" layoutY="277.0" prefHeight="38.0" prefWidth="60.0" text="0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="posibles" alignment="CENTER_RIGHT" editable="false" layoutX="115.0" layoutY="277.0" prefHeight="38.0" prefWidth="60.0" text="0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </TextField>
+            <Label layoutX="101.0" layoutY="277.0" text="/">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Button fx:id="masFaltas" layoutX="275.0" layoutY="154.0" mnemonicParsing="false" onAction="#onFaltaR" text="+" />
+            <Button fx:id="menosFaltas" layoutX="468.0" layoutY="154.0" mnemonicParsing="false" onAction="#onFaltaRM" prefHeight="25.0" prefWidth="25.0" text="-" />
+            <HBox layoutX="47.0" layoutY="523.0" prefHeight="106.0" prefWidth="232.0" spacing="10.0">
+               <children>
+                  <VBox prefHeight="106.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="n1" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="111.0" text="nº Nombre" />
+                        <Label fx:id="n2" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="111.0" text="nº Nombre" />
+                        <Label fx:id="n3" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="111.0" text="nº Nombre" />
+                        <Label fx:id="n4" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="111.0" text="nº Nombre" />
+                        <Label fx:id="n5" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="111.0" text="nº Nombre" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox prefHeight="17.0" prefWidth="200.0">
+                           <children>
+                              <CheckBox fx:id="f11" disable="true" mnemonicParsing="false" />
+                              <CheckBox fx:id="f12" disable="true" mnemonicParsing="false" />
+                              <CheckBox fx:id="f13" disable="true" mnemonicParsing="false" />
+                              <CheckBox fx:id="f14" disable="true" mnemonicParsing="false" />
+                              <CheckBox fx:id="f15" disable="true" mnemonicParsing="false" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="17.0" prefWidth="200.0">
+                           <children>
+                              <CheckBox fx:id="f21" disable="true" mnemonicParsing="false" />
+                              <CheckBox fx:id="f22" disable="true" mnemonicParsing="false" />
+                              <CheckBox fx:id="f23" disable="true" mnemonicParsing="false" />
+                              <CheckBox fx:id="f24" disable="true" mnemonicParsing="false" />
+                              <CheckBox fx:id="f25" disable="true" mnemonicParsing="false" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="17.0" prefWidth="200.0">
+                           <children>
+                              <CheckBox fx:id="f31" disable="true" mnemonicParsing="false" />
+                              <CheckBox fx:id="f32" disable="true" mnemonicParsing="false" />
+                              <CheckBox fx:id="f33" disable="true" mnemonicParsing="false" />
+                              <CheckBox fx:id="f34" disable="true" mnemonicParsing="false" />
+                              <CheckBox fx:id="f35" disable="true" mnemonicParsing="false" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="17.0" prefWidth="200.0">
+                           <children>
+                              <CheckBox fx:id="f41" disable="true" mnemonicParsing="false" />
+                              <CheckBox fx:id="f42" disable="true" mnemonicParsing="false" />
+                              <CheckBox fx:id="f43" disable="true" mnemonicParsing="false" />
+                              <CheckBox fx:id="f44" disable="true" mnemonicParsing="false" />
+                              <CheckBox fx:id="f45" disable="true" mnemonicParsing="false" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="17.0" prefWidth="200.0">
+                           <children>
+                              <CheckBox fx:id="f51" disable="true" mnemonicParsing="false" />
+                              <CheckBox fx:id="f52" disable="true" mnemonicParsing="false" />
+                              <CheckBox fx:id="f53" disable="true" mnemonicParsing="false" />
+                              <CheckBox fx:id="f54" disable="true" mnemonicParsing="false" />
+                              <CheckBox fx:id="f55" disable="true" mnemonicParsing="false" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <TextField fx:id="nameRival" alignment="CENTER" layoutX="290.0" layoutY="15.0" prefHeight="42.0" prefWidth="199.0" text="Oliwis">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </TextField>
+            <Button fx:id="cuartoBack" layoutX="70.0" layoutY="432.0" mnemonicParsing="false" onAction="#onBackCuarter" prefHeight="43.0" prefWidth="91.0" text="Anterior" />
+            <Text fx:id="warningTime" fill="RED" layoutX="281.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EL TIEMPO ESTÁ ACTIVO!" visible="false" wrappingWidth="355.13671875">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Button layoutX="65.0" layoutY="398.0" mnemonicParsing="false" onAction="#onMas10" text="+10s" />
+            <Button layoutX="119.0" layoutY="398.0" mnemonicParsing="false" onAction="#onMas30" text="+30s" />
+            <Button layoutX="178.0" layoutY="398.0" mnemonicParsing="false" onAction="#onMenos10" text="-10s" />
+            <Button layoutX="230.0" layoutY="398.0" mnemonicParsing="false" onAction="#onMenos30" text="-30s" />
+            <Button layoutX="-74.0" layoutY="523.0" mnemonicParsing="false" onAction="#onSaveMatch" prefHeight="57.0" prefWidth="128.0" text="Guardar Partido" />
+            <ProgressBar fx:id="progressBar" layoutX="-72.0" layoutY="502.0" prefHeight="18.0" prefWidth="128.0" progress="0.0" visible="false" />
+         </children>
+      </AnchorPane>
+      <HBox prefHeight="412.0" prefWidth="535.0" spacing="20.0" GridPane.columnSpan="6" GridPane.rowIndex="2" GridPane.rowSpan="5">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="415.0" prefWidth="96.0" spacing="10.0">
+               <children>
+                  <Button fx:id="T1" mnemonicParsing="false" onAction="#onC1" prefHeight="50.0" prefWidth="50.0">
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/T1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Text fx:id="tc1" strokeType="OUTSIDE" strokeWidth="0.0" text="0 / 0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="T2" mnemonicParsing="false" onAction="#onC2" prefHeight="50.0" prefWidth="50.0">
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/T2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Text fx:id="tc2" strokeType="OUTSIDE" strokeWidth="0.0" text="0 / 0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="T3" mnemonicParsing="false" onAction="#onC3" prefHeight="50.0" prefWidth="50.0">
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/T3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Text fx:id="tc3" strokeType="OUTSIDE" strokeWidth="0.0" text="0 / 0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="rec" mnemonicParsing="false" onAction="#onRecu" prefHeight="50.0" prefWidth="50.0">
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/Recup.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Text fx:id="trec" strokeType="OUTSIDE" strokeWidth="0.0" text="0 / 0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="40.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="417.0" prefWidth="96.0" spacing="10.0">
+               <children>
+                  <Button fx:id="ass" mnemonicParsing="false" onAction="#onAss" prefHeight="50.0" prefWidth="50.0">
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/Asist.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Text fx:id="tass" strokeType="OUTSIDE" strokeWidth="0.0" text="0 / 0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="rdef" mnemonicParsing="false" onAction="#onRD" prefHeight="50.0" prefWidth="50.0">
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/R%20Def.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Text fx:id="trd" strokeType="OUTSIDE" strokeWidth="0.0" text="0 / 0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="rofe" mnemonicParsing="false" onAction="#onRO" prefHeight="50.0" prefWidth="50.0">
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/R%20Ofe.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Text fx:id="tro" strokeType="OUTSIDE" strokeWidth="0.0" text="0 / 0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="rap" mnemonicParsing="false" onAction="#onTap" prefHeight="50.0" prefWidth="50.0">
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/Tapon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Text fx:id="tta" strokeType="OUTSIDE" strokeWidth="0.0" text="0 / 0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="40.0" />
+               </padding>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="398.0" prefWidth="5.0" />
+            <VBox alignment="TOP_CENTER" prefHeight="417.0" prefWidth="96.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onFC1" prefHeight="50.0" prefWidth="50.0" fx:id="x1">
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/TF1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Text fx:id="tx1" strokeType="OUTSIDE" strokeWidth="0.0" text="0 / 0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Button mnemonicParsing="false" onAction="#onFC2" prefHeight="50.0" prefWidth="50.0" fx:id="x2">
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/TF2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Text fx:id="tx2" strokeType="OUTSIDE" strokeWidth="0.0" text="0 / 0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Button mnemonicParsing="false" onAction="#onFC3" prefHeight="50.0" prefWidth="50.0" fx:id="x3">
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/TF3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Text fx:id="tx3" strokeType="OUTSIDE" strokeWidth="0.0" text="0 / 0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <RadioButton fx:id="radioRestar" mnemonicParsing="false" onAction="#onRestar" text="Restar">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="40.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="417.0" prefWidth="96.0" spacing="10.0">
+               <children>
+                  <Button fx:id="falta" mnemonicParsing="false" onAction="#onFault" prefHeight="50.0" prefWidth="50.0">
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/Falta.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Text fx:id="tfalta" strokeType="OUTSIDE" strokeWidth="0.0" text="0 / 0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="perdida" mnemonicParsing="false" onAction="#onPerdida" prefHeight="50.0" prefWidth="50.0">
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/Perdida.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Text fx:id="tper" strokeType="OUTSIDE" strokeWidth="0.0" text="0 / 0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Button fx:id="cambio" mnemonicParsing="false" onAction="#onSwitch" prefHeight="50.0" prefWidth="50.0">
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/11297.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="40.0" />
+               </padding>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="669.0" spacing="40.0" />
+         </children>
+         <GridPane.margin>
+            <Insets bottom="30.0" left="30.0" top="30.0" />
+         </GridPane.margin>
+      </HBox>
+      <GridPane prefHeight="165.0" prefWidth="575.0" GridPane.columnSpan="6" GridPane.rowIndex="1">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="132.0" minHeight="10.0" prefHeight="131.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="CENTER" GridPane.rowIndex="1">
+               <children>
+                  <Label fx:id="name1" alignment="CENTER" contentDisplay="CENTER" text="AAAAAAAA">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox prefHeight="131.0" prefWidth="101.0">
+               <children>
+                  <ImageView fx:id="img2" fitHeight="122.0" fitWidth="100.0" onMouseClicked="#onImg1" pickOnBounds="true" preserveRatio="true" />
+                  <Pane fx:id="i1" maxHeight="10.0" prefHeight="10.0" prefWidth="89.0" style="-fx-background-color: RED;" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Label fx:id="name2" alignment="CENTER" contentDisplay="CENTER" text="AAAAAAAA">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <Label fx:id="name3" alignment="CENTER" contentDisplay="CENTER" text="AAAAAAAA">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <children>
+                  <Label fx:id="name4" alignment="CENTER" contentDisplay="CENTER" text="AAAAAAAA">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <children>
+                  <Label fx:id="name5" alignment="CENTER" contentDisplay="CENTER" text="AAAAAAAA">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox GridPane.columnIndex="1">
+               <children>
+                  <ImageView fx:id="img1" fitHeight="122.0" fitWidth="100.0" onMouseClicked="#onImg2" pickOnBounds="true" preserveRatio="true" />
+                  <Pane fx:id="i2" maxHeight="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: RED;" visible="false" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </VBox>
+            <VBox GridPane.columnIndex="2">
+               <children>
+                  <ImageView fx:id="img3" fitHeight="122.0" fitWidth="100.0" onMouseClicked="#onImg3" pickOnBounds="true" preserveRatio="true" />
+                  <Pane fx:id="i3" maxHeight="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: RED;" visible="false" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </VBox>
+            <VBox GridPane.columnIndex="3">
+               <children>
+                  <ImageView fx:id="img4" fitHeight="122.0" fitWidth="100.0" onMouseClicked="#onImg4" pickOnBounds="true" preserveRatio="true" />
+                  <Pane fx:id="i4" maxHeight="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: RED;" visible="false" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </VBox>
+            <VBox GridPane.columnIndex="4">
+               <children>
+                  <ImageView fx:id="img5" fitHeight="122.0" fitWidth="100.0" onMouseClicked="#onImg5" pickOnBounds="true" preserveRatio="true" />
+                  <Pane fx:id="i5" maxHeight="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: RED;" visible="false" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </GridPane>
+   </children>
+</GridPane>
