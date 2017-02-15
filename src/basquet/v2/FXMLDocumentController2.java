@@ -5,11 +5,14 @@
  */
 package basquet.v2;
 
-import java.io.File;
+import Persistencia.Factory;
+import Persistencia.helper;
+import Persistencia.Match;
+import Persistencia.wrapper;
+import Persistencia.Player;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.net.URL;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -35,9 +38,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
 
 /**
  *
@@ -202,48 +202,21 @@ public class FXMLDocumentController2 implements Initializable {
     }
 
     @FXML
-    private void onAddPlayer(ActionEvent event
-    ) {
+    private void onAddPlayer(ActionEvent event) {
         labelNotEnoughPl.setVisible(false);
 
-        try {
-            FXMLLoader myLoader = new FXMLLoader(getClass().getResource("addPlayerWindow.fxml"));
-            Parent root = (Parent) myLoader.load();
-            AddPlayerWindowController dcCon = myLoader.<AddPlayerWindowController>getController();
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.setTitle("Datos del Jugador");
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setResizable(false);
-            dcCon.init(this.dcCon);
-            stage.show();
-        } catch (Exception e) {
-
-        }
+        FXMLLoader myLoader = new FXMLLoader(getClass().getResource("addPlayerWindow.fxml"));
+        Factory.showAddPlayerWindowController(myLoader);
 
     }
 
     @FXML
     private void onModPlayer(ActionEvent event) {
-
-        try {
-            FXMLLoader myLoader = new FXMLLoader(getClass().getResource("addPlayerWindow.fxml"));
-            Parent root = (Parent) myLoader.load();
-            AddPlayerWindowController dcCon = myLoader.<AddPlayerWindowController>getController();
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.setTitle("Datos del Jugador");
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setResizable(false);
-            dcCon.init(this.dcCon);
-            Player pl = tablePlayers.getSelectionModel().getSelectedItem();
-            dcCon.loadPlayer(pl.getNamep(), pl.getSurnamep(), pl.getSurname2p(), pl.birthPProperty().get(), pl.posPProperty().get(), pl.imgPProperty().get(), pl, pl.getDorsal());
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        FXMLLoader myLoader = new FXMLLoader(getClass().getResource("addPlayerWindow.fxml"));
+        AddPlayerWindowController con = Factory.showAddPlayerWindowController(myLoader);
+        con.init(dcCon);
+        Player pl = tablePlayers.getSelectionModel().getSelectedItem();
+        con.loadPlayer(pl);
 
     }
 
@@ -280,80 +253,28 @@ public class FXMLDocumentController2 implements Initializable {
     }
 
     public void newMatch() {
-        try {
-            FXMLLoader myLoader = new FXMLLoader(getClass().getResource("prestart.fxml"));
-            Parent root = (Parent) myLoader.load();
-            PrestartController dcCon = myLoader.<PrestartController>getController();
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.setTitle("Quinteto Inicial");
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setResizable(true);
-            dcCon.init(this.dcCon);
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        FXMLLoader myLoader = new FXMLLoader(getClass().getResource("prestart.fxml"));
+        Factory.showPrestartController(myLoader).init(dcCon);
     }
 
     private void onResumeMatch(ActionEvent event) {
-        try {
-            FXMLLoader myLoader = new FXMLLoader(getClass().getResource("prestart.fxml"));
-            Parent root = (Parent) myLoader.load();
-            PrestartController dcCon1 = myLoader.<PrestartController>getController();
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.setTitle("Datos del Partido");
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setResizable(false);
-            Match match = tableMatch.getSelectionModel().getSelectedItem();
-            dcCon1.init(this.dcCon, match);
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        FXMLLoader myLoader = new FXMLLoader(getClass().getResource("prestart.fxml"));
+        Match match = tableMatch.getSelectionModel().getSelectedItem();
+        Factory.showPrestartController(myLoader).init(dcCon, match);
     }
 
     @FXML
     private void onLookMatch(ActionEvent event) {
-        try {
-            FXMLLoader myLoader = new FXMLLoader(getClass().getResource("matchData.fxml"));
-            Parent root = (Parent) myLoader.load();
-            MatchDataController dcCon1 = myLoader.<MatchDataController>getController();
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.setTitle("Datos del Partido");
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setResizable(false);
-            Match match = tableMatch.getSelectionModel().getSelectedItem();
-            dcCon1.init(match, false);
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        FXMLLoader myLoader = new FXMLLoader(getClass().getResource("matchData.fxml"));
+        Match match = tableMatch.getSelectionModel().getSelectedItem();
+        Factory.showMatchDataController(myLoader).init(match, false);
     }
 
     @FXML
     private void onLookPlayer(ActionEvent event) {
-        try {
-            FXMLLoader myLoader = new FXMLLoader(getClass().getResource("PlayerData.fxml"));
-            Parent root = (Parent) myLoader.load();
-            PlayerDataController dcCon1 = myLoader.<PlayerDataController>getController();
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.setTitle("Media de Jugador");
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setResizable(false);
-            Player pl = tablePlayers.getSelectionModel().getSelectedItem();
-            dcCon1.init(pl);
-            stage.show();
-        } catch (Exception e) {
-
-        }
+        FXMLLoader myLoader = new FXMLLoader(getClass().getResource("PlayerData.fxml"));
+        Player pl = tablePlayers.getSelectionModel().getSelectedItem();
+        Factory.showPlayerDataController(myLoader).init(pl);
     }
 
 }

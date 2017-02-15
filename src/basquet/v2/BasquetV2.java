@@ -5,6 +5,8 @@
  */
 package basquet.v2;
 
+import Persistencia.Factory;
+import Persistencia.helper;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -21,36 +23,16 @@ public class BasquetV2 extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        /*
+        
+        
         FXMLLoader myLoader = new FXMLLoader(getClass().getResource("FXMLDocument.fxml"));
-        Parent root = (Parent) myLoader.load();
-        FXMLDocumentController dcCon = myLoader.<FXMLDocumentController>getController();
-        Scene scene = new Scene(root);
-        dcCon.init(dcCon);
-        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-            @Override
-            public void handle(WindowEvent event) {
-                    helper.saveWrapper();
-            }
-        });
-        stage.setScene(scene);
-        stage.show();
-        */
+        Factory.showFXMLDocumentController(myLoader);
         
         
+        /*
         FXMLLoader myLoader = new FXMLLoader(getClass().getResource("FXMLDocument2.fxml"));
-        Parent root = (Parent) myLoader.load();
-        FXMLDocumentController2 dcCon = myLoader.<FXMLDocumentController2>getController();
-        Scene scene = new Scene(root);
-        dcCon.init(dcCon);
-        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-            @Override
-            public void handle(WindowEvent event) {
-                    helper.saveWrapper();
-            }
-        });
-        stage.setScene(scene);
-        stage.show();
+        Factory.showFXMLDocumentController2(myLoader);
+        */
     }
 
     /**

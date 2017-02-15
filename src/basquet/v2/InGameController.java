@@ -5,6 +5,10 @@
  */
 package basquet.v2;
 
+import Persistencia.Factory;
+import Persistencia.helper;
+import Persistencia.Match;
+import Persistencia.Player;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -744,23 +748,8 @@ public class InGameController implements Initializable {
 
     @FXML
     private void onMatchData(ActionEvent event) {
-        try {
-            FXMLLoader myLoader = new FXMLLoader(getClass().getResource("matchData.fxml"));
-            Parent root = (Parent) myLoader.load();
-            MatchDataController dcCon = myLoader.<MatchDataController>getController();
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.setTitle("Datos del Partido");
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setResizable(false);
-            //setPlayerList();
-            saveMatch(false);
-            dcCon.init(match, true);
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        FXMLLoader myLoader = new FXMLLoader(getClass().getResource("matchData.fxml"));
+        Factory.showMatchDataController(myLoader).init(match, true);
     }
 
     private void setPlayerList() {
@@ -1009,7 +998,7 @@ public class InGameController implements Initializable {
             masmenos(-2);
         } else {
             try {
-                FXMLLoader myLoader = new FXMLLoader(getClass().getResource("Court.fxml"));
+                /*
                 Parent root = (Parent) myLoader.load();
                 CourtController dcCon = myLoader.<CourtController>getController();
                 Scene scene = new Scene(root);
@@ -1022,11 +1011,14 @@ public class InGameController implements Initializable {
                 stage.setOnCloseRequest((WindowEvent event1) -> {
                     pl.getmP().getT2mp().get(cuartCount - 1).add(0);
                 });
-                stage.show();
+                stage.show();*/
             } catch (Exception e) {
                 System.out.println("Holi, tengo un problema");
                 e.printStackTrace();
+                
             }
+            FXMLLoader myLoader = new FXMLLoader(getClass().getResource("Court.fxml"));
+            //Factory.showCourtController(myLoader, this).init(ar.get(selected - 1).getmP(), false, cuartCount);
 
             pl.getmP().getTcmp().set(cuartCount - 1, pl.getmP().getTcmp().get(cuartCount - 1) + 2);
             pl.getmP().getTcmp().set(4, pl.getmP().getTcmp().get(4) + 2);

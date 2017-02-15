@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package basquet.v2;
+package Persistencia;
 
 import java.util.ArrayList;
 import javafx.beans.property.IntegerProperty;

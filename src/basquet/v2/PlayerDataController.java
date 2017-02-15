@@ -5,6 +5,7 @@
  */
 package basquet.v2;
 
+import Persistencia.Player;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;

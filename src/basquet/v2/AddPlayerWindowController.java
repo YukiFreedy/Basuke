@@ -5,7 +5,9 @@
  */
 package basquet.v2;
 
-import java.io.BufferedInputStream;
+import Persistencia.*;
+import Persistencia.wrapper;
+import Persistencia.Player;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -31,7 +33,6 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
-import javax.imageio.ImageIO;
 
 /**
  * FXML Controller class
@@ -189,9 +190,8 @@ public class AddPlayerWindowController implements Initializable {
             error.setVisible(true);
             return;
         }
-        helper help = new helper();
         if (!mode) {
-            Player player = new Player();
+            Player player = Factory.createPlayer();
             player.setNamep(name.getText());
             player.setSurnamep(surname.getText());
             player.setSurname2p(surname2.getText());
@@ -230,21 +230,22 @@ public class AddPlayerWindowController implements Initializable {
         this.dcCon = dcCon;
     }
 
-    public void loadPlayer(String name, String surname, String surname1, String birth, String pos, String img, Player pl, int dorsal) {
-        this.name.setText(name);
-        this.surname.setText(surname);
-        this.surname2.setText(surname1);
-        this.pos.getSelectionModel().select(Integer.parseInt(pos.substring(0, 1)) - 1);
-        this.dorsal.setText(Integer.toString(dorsal));
-        String[] aux = birth.split("/");
+    public void loadPlayer(Player p) {
+        this.name.setText(p.getNamep());
+        this.surname.setText(p.getSurnamep());
+        this.surname2.setText(p.getSurname2p());
+        this.pos.getSelectionModel().select(Integer.parseInt(Integer.toString(p.getPos()).substring(0, 1)) - 1);
+        this.dorsal.setText(Integer.toString(p.getDorsal()));
+        
+        String[] aux = p.birthPProperty().get().split("/");
 
         this.dd.getSelectionModel().select(Integer.parseInt(aux[0]));
         this.mm.getSelectionModel().select(Integer.parseInt(aux[1]));
         this.yyyy.getSelectionModel().select(Integer.parseInt(aux[2]));
-        this.pl = pl;
+        this.pl = p;
         mode = true;
         //img left
-        this.img = img;
+        this.img = p.getImg();
         InputStream is = null;
         try {
             if(img.equals("nop"))is = this.getClass().getResourceAsStream("/resources/NoUserImage_Big.png");

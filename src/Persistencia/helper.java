@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package basquet.v2;
+package Persistencia;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ import javax.xml.bind.Unmarshaller;
  *
  * @author Yuki
  */
-class helper {
+public class helper {
 
     private static wrapper wrap;
 
