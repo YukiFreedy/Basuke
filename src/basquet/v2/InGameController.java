@@ -9,6 +9,7 @@ import Persistencia.Factory;
 import Persistencia.helper;
 import Persistencia.Match;
 import Persistencia.Player;
+import Persistencia.Timer;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -287,12 +288,16 @@ public class InGameController implements Initializable {
     @FXML
     private ProgressBar progressBar;
 
+    private int tiempoArray[];
+
+    private Timer reloj;
     /**
      * Initializes the controller class.
      *
      * @param are
      * @param rivalName
      * @param lv
+     * @param con
      */
     public void init(ArrayList<Player> are, String rivalName, int lv, InGameController con, FXMLDocumentController dcC) {
         match = new Match();
@@ -303,7 +308,7 @@ public class InGameController implements Initializable {
         running = true;
         timer = false;
         cuartoBack.setDisable(true);
-
+        tiempoArray = new int[4];
         fal = new CheckBox[5][5];
         fal[0][0] = f11;
         fal[1][0] = f21;
@@ -346,7 +351,9 @@ public class InGameController implements Initializable {
 
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Date date = new Date();
-        if(match.getDate() == null) this.match.setDate(dateFormat.format(date));
+        if (match.getDate() == null) {
+            this.match.setDate(dateFormat.format(date));
+        }
         this.match.setRival(rivalName);
         boolean aux;
         if (lv == 0) {
@@ -401,13 +408,13 @@ public class InGameController implements Initializable {
         refresh2();
         refresh3(0);
         refresh4();
+        
     }
 
     public void init(ArrayList<Player> are, String rivalName, int lv, InGameController con, FXMLDocumentController dcC, Match match) {
         this.match = match;
         this.dcC = dcC;
         nameRival.setText(rivalName);
-        tiempo = 600;
         running = true;
         timer = false;
         cuartoBack.setDisable(true);
@@ -535,9 +542,8 @@ public class InGameController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        stopTimer.setText("Empezar Cuarto");
-        cuartoNext.setDisable(true);
-
+        stopTimer.setText("Reanudar Tiempo");
+        reloj = new Timer(this);
     }
 
     @FXML
@@ -613,7 +619,6 @@ public class InGameController implements Initializable {
         if (cuartCount == 4) {
             cuarto.setText("Cuarto");
         }
-        tiempo = 600;
         refresh3(0);
         refresh2();
     }
@@ -680,70 +685,36 @@ public class InGameController implements Initializable {
     }
 
     @FXML
-    private void onStopTimer(ActionEvent event) {
-        if (cuartCount == 0) {
-            cuartCount++;
+    private synchronized void onStopTimer(ActionEvent event) {
+        if(cuartCount == 0) cuartCount = 1;
+        int i = match.getCuarterTimes().get(cuartCount);
+        rearrangeTime(i);
+        timer(0);
+        
+        if(reloj.isOn()){
+            reloj.off();
+            stopTimer.setText("Reanudar Tiempo");
+            cuartoBack.setDisable(false);
+            cuartoNext.setDisable(false);
+        }else{
+            reloj.on();
+            stopTimer.setText("Detener Tiempo");
+            cuartoBack.setDisable(true);
+            cuartoNext.setDisable(true);
         }
-        if (!timer) {
-            try {
-                timer = true;
-                running = true;
-                th = new Task<Integer>() {
-                    @Override
-                    protected synchronized Integer call() throws Exception {
-                        while (running) {
-                            th.wait(1000);
-                            refresh3(1);
-                        }
-                        return null;
-                    }
-                };
-                t = new Thread(th);
-                //t.setDaemon(true);
-                t.start();
-            } catch (Exception e) {
-                try {
-                    PrintWriter pr = new PrintWriter(new File("crash_reports/crashed.txt"));
-                    pr.write(e.toString());
-                    pr.close();
-                } catch (Exception a) {
-                    a.printStackTrace();
-                }
-            }
-            try {
-                stopTimer.setText("Detener Tiempo");
-                cuartoNext.setDisable(timer);
-                cuartoBack.setDisable(timer);
-                warningTime.setVisible(false);
-            } catch (Exception e) {
-                try {
-                    PrintWriter pr = new PrintWriter(new File("crash_reports/crashed.txt"));
-                    pr.write(e.toString());
-                    pr.close();
-                } catch (Exception a) {
-                    a.printStackTrace();
-                }
-            }
-
-        } else {
-            try {
-                timer = false;
-                running = false;
-                cuartoNext.setDisable(false);
-                cuartoBack.setDisable(false);
-                stopTimer.setText("Reanudar");
-                warningTime.setVisible(false);
-            } catch (Exception e) {
-                try {
-                    PrintWriter pr = new PrintWriter(new File("crash_reports/crashed.txt"));
-                    pr.write(e.toString());
-                    pr.close();
-                } catch (Exception a) {
-                    a.printStackTrace();
-                }
-            }
-        }
-
+        
+    }
+    
+    private void rearrangeTime(int t){
+        if(t == 600){
+            t = 0;
+            tiempoArray[3] = 1;
+        }else tiempoArray[3] = t/600;
+        tiempoArray[2] = t/60;
+        while(t >= 60) t += -60;
+        if(t >= 10) tiempoArray[1] = Integer.toString(t).charAt(1);
+        else tiempoArray[1] = 0;
+        tiempoArray[0] = Integer.toString(t).charAt(0);
     }
 
     @FXML
@@ -1015,7 +986,7 @@ public class InGameController implements Initializable {
             } catch (Exception e) {
                 System.out.println("Holi, tengo un problema");
                 e.printStackTrace();
-                
+
             }
             FXMLLoader myLoader = new FXMLLoader(getClass().getResource("Court.fxml"));
             //Factory.showCourtController(myLoader, this).init(ar.get(selected - 1).getmP(), false, cuartCount);
@@ -1693,7 +1664,8 @@ public class InGameController implements Initializable {
 
     //El del Tiempo
     private void refresh3(int i) {
-        try {
+        timer(i);
+        /*try {
             for (int x = 0; x < ar.size(); x++) {
                 Player pl = ar.get(x);
                 ar.get(x).getmP().setTiemJugadomp(ar.get(x).getmP().getTiemJugadomp() + i);
@@ -1709,22 +1681,6 @@ public class InGameController implements Initializable {
             tiempo += -i;
             match.getCuarterTimes().set(cuartCount - 1, match.getCuarterTimes().get(cuartCount - 1) - i);
             tiempo = match.getCuarterTimes().get(cuartCount - 1);
-            /*
-        if (tiempo == 600) {
-            axxx.setText("1");
-        } else {
-            axxx.setText("0");
-        }
-        xaxx.setText(Integer.toString(tiempo / 60).substring(0, 1));
-        if (tiempo % 60 < 10) {
-            xxax.setText("0");
-            xxxa.setText(Integer.toString(tiempo % 60));
-        } else {
-            xxax.setText(Integer.toString(tiempo % 60).substring(0, 1));
-            xxxa.setText(Integer.toString(tiempo % 60).substring(1, 2));
-        }
-             */
-
             int aux = tiempo - i;
             String ax = Integer.toString(aux % 60);
             if (ax.length() == 1) {
@@ -1741,12 +1697,12 @@ public class InGameController implements Initializable {
         } catch (Exception e) {
             try {
                 PrintWriter pr = new PrintWriter(new File("crash_reports/crashed.txt"));
-                pr.write(e.toString());
+                pr.write(e.getMessage());
                 pr.close();
             } catch (Exception a) {
                 a.printStackTrace();
             }
-        }
+        }*/
     }
 
     //el de las faltas
@@ -1843,5 +1799,43 @@ public class InGameController implements Initializable {
 
         setPlayerList();
         refresh4();
+    }
+
+    public synchronized void timer(int i) {
+        warningTime.setVisible(false);
+        tiempo = tiempoArray[3] * 10 * 60 + tiempoArray[2] * 60 + tiempoArray[1] * 10 + tiempoArray[0];
+        if (tiempo - i <= 0) {
+            for (int j = 0; j < 4; j++) {
+                tiempoArray[j] = 0;
+            }
+        }
+
+        if (tiempoArray[0] == 0 && tiempoArray[1] == 0 && tiempoArray[2] == 0 && tiempoArray[3] == 0) {
+            axxx.setText(Integer.toString(0));
+            xaxx.setText(Integer.toString(0));
+            xxax.setText(Integer.toString(0));
+            xxxa.setText(Integer.toString(0));
+            warningTime.setVisible(true);
+            return;
+        }
+        
+        match.getCuarterTimes().set(cuartCount - 1, match.getCuarterTimes().get(cuartCount - 1) - i);
+        
+        tiempoArray[3] += -1;
+        if (tiempoArray[3] == 9) {
+            tiempoArray[2] += -1;
+            if (tiempoArray[2] == 9) {
+                tiempoArray[2] = 5;
+                tiempoArray[1] += -1;
+                if (tiempoArray[1] == 9) {
+                    tiempoArray[0] += -1;
+                }
+            }
+        }
+
+        axxx.setText(Integer.toString(tiempoArray[0]));
+        xaxx.setText(Integer.toString(tiempoArray[1]));
+        xxax.setText(Integer.toString(tiempoArray[2]));
+        xxxa.setText(Integer.toString(tiempoArray[3]));
     }
 }
